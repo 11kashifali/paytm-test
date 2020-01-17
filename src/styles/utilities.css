@@ -1,0 +1,93 @@
+/**
+ * Custom utilities go here..
+ */
+ .transition-20 {
+  transition: all 0.2s;
+}
+.transition-40 {
+  transition: all 0.4s;
+}
+.transition-80 {
+  transition: all 0.8s;
+}
+.rotate-90 {
+  transform: rotate(270deg);
+}
+.bounce-enter-active {
+  animation: bounce-in .2s;
+}
+.bounce-leave-active {
+  animation: bounce-in 0s reverse;
+}
+.animation-fadein-15 {
+  animation: fadein 1.5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    transform-origin: center left;
+  }
+  100% {
+    transform-origin: center left;
+    transform: scaleX(1);
+  }
+}
+@variants hover {
+  .gradient-bg-shoe-blue {
+    background: linear-gradient(322deg, transparent 8%, config('colors.shoe-blue') 8.5%);
+  }
+
+  .gradient-bg-white {
+    background: linear-gradient(322deg, transparent 8%, config('colors.white') 8%);
+  }
+  .filter-white {
+    filter: brightness(0) invert(100%);
+  }
+  .filter-none {
+    filter: none;
+  }
+  .scale-110 {
+    transform-origin: center center;
+    transform: scale(1.1);
+  }
+  .scale-120 {
+    transform-origin: center center;
+    transform: scale(1.2);
+  }
+  .scale-100 {
+    transform-origin: center center;
+    transform: scale(1);
+  }
+  .scale-90 {
+    transform-origin: center center;
+    transform: scale(0.9);
+  }
+  .scale-80 {
+    transform-origin: center center;
+    transform: scale(0.8);
+  }
+  .scale-70 {
+    transform-origin: center center;
+    transform: scale(0.7);
+  }
+}
+.line {
+  @apply bg-black ml-0 opacity-50 w-24 h-1
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
